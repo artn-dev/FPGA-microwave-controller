@@ -1,5 +1,5 @@
 .SUFFIXES: .v .tb.v .vcd
-VPATH = nivel3
+VPATH = nivel3:nivel2
 
 OUT := $(CURDIR)/build
 
