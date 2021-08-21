@@ -1,5 +1,5 @@
 module BCDCounter_mod10_tb;
-    parameter PERIOD = 5;
+    parameter HALF_PERIOD = 5;
 
     reg  clk, clr, load, en;
     reg  [3:0] data;
@@ -9,7 +9,7 @@ module BCDCounter_mod10_tb;
     initial begin
         clk = 0;
     end
-    always #PERIOD clk = ~clk;
+    always #HALF_PERIOD clk = ~clk;
 
     BCDCounter_mod10 ct_1(
         .clrn(clr), .loadn(load), .en(en), .clk(clk),
