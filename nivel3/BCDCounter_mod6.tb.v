@@ -4,7 +4,7 @@ module BCDCounter_mod6_tb;
     reg  clk, clr, load, en;
     reg  [3:0] data;
     wire [3:0] out;
-    wire tc;
+    wire tc, zero;
 
     initial begin
         clk = 0;
@@ -13,7 +13,7 @@ module BCDCounter_mod6_tb;
 
     BCDCounter_mod6 ct_1(
         .clrn(clr), .loadn(load), .en(en), .clk(clk),
-        .data(data), .out(out), .tc(tc)
+        .data(data), .out(out), .tc(tc), .zero(zero)
     );
 
     initial begin
