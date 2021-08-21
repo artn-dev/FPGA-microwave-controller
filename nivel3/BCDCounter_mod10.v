@@ -6,7 +6,7 @@ module BCDCounter_mod10 (
 );
   reg [3:0] curr_state, next_state;
 
-  always @(posedge clk, negedge loadn, negedge  clrn, posedge en) begin
+  always @(posedge clk, negedge loadn, negedge clrn) begin
     if (~clrn)
       curr_state <= 4'd0;
     else if (~loadn)
