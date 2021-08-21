@@ -1,5 +1,5 @@
 module BCDCounter_mod6_tb;
-    parameter HALF_PERIOD = 5;
+    parameter HALF_PERIOD = 0.5;
 
     reg  clk, clr, load, en;
     reg  [3:0] data;
