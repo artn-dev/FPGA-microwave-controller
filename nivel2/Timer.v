@@ -25,7 +25,7 @@ module Timer(
     );
 
     BCDCounter_mod10 mins_cnt(
-        clrn, loadn, tc1, clk, isec_tens,
+        clrn, loadn, (tc0 & tc1), clk, isec_tens,
         imins, tc2, zero2
     );
 
