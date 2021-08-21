@@ -2,7 +2,7 @@ module BCDCounter_mod6 (
   input  wire clrn, loadn, en, clk,
   input  wire [3:0] data,
   output reg  [3:0] out,
-  output reg  tc
+  output reg  tc, zero
 );
   reg [3:0] curr_state, next_state;
 
@@ -21,11 +21,13 @@ module BCDCounter_mod6 (
 
     if (curr_state == 4'd0) begin
       next_state = 4'd5;
+      zero = 1'b1;
       if (en)
         tc = 1'b1;
     end
     else begin
       next_state = curr_state - 4'd1;
+      zero = 1'b0;
     end
   end
 
