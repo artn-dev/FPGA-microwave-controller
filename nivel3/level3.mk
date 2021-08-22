@@ -1,4 +1,4 @@
-objs := BCDCounter_mod6.vcd BCDCounter_mod10.vcd
+objs := BCDCounter_mod6.vcd BCDCounter_mod10.vcd Counter7.vcd
 
 all: $(objs)
 
