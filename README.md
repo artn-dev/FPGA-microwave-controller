@@ -53,8 +53,8 @@ O sistema deve funcionar no momento que precede o cozimento do alimento, ou seja
       </a>
     </td>
     <td align="center">
-      <a href="">
-        <img src="" width="100px;" alt="Foto do Paulo Henrique"/><br>
+      <a href="https://github.com/paulohltc">
+        <img src="https://avatars.githubusercontent.com/u/55456082?v=4" width="100px;" alt="Foto do Paulo Henrique"/><br>
         <sub>
           <b>Paulo Henrique</b>
         </sub>
