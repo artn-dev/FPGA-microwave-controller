@@ -1,4 +1,4 @@
-module Counter7(
+module Counter0_7(
     input  wire clk, clrn,
     output reg  out
 );
