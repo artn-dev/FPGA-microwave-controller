@@ -1,7 +1,38 @@
-# Projeto 2 da disciplina de Sistemas Digitais (if675)
+# 🖥️ Projeto 2 da disciplina de Sistemas Digitais (if675)
 O **objetivo** do projeto é fazermos a estrutura lógica em verilog do funcionamento de um Forno de Microondas. 
 
 O sistema deve funcionar no momento que precede o cozimento do alimento, ou seja deve haver o input do tempo desejado para o cozimento. Cada número pressionado aparece à direita do display, e os outros dígitos se deslocam para a esquerda. Quando o botão iniciar é pressionado, se a porta estiver fechada, o tubo de magnetron é ativado e os dígitos fazem uma contagem decrescente em minutos e segundos. Zeros à frente são eliminados no display. Se a porta é aberta ou o botão de parar é pressionado, o tempo para no valor atual e o magnetron é desligado. Pressionar ‘limpar’ (clear) a qualquer momento força a contagem a 0. Quando a contagem chega a 0, o magnetron é desligado e o tempo lê 0. Se uma pessoa entra um valor inicial para segundos maior que 59 (isto é, 60-99), o contador de segundos deve contar de maneira decrescente deste valor até 00.
+
+### To-do List do Projeto
+- [ ] Nível 1
+  - [ ] Integrar Nível 2 e 3
+  - [ ] Testar a Integração (Bancada de Testes)
+
+- [ ] Nível 2
+  - [ ] Integrar todos os blocos do nível 3 
+  - [ ] Testar a Integração (Bancada de Testes)
+  
+- [ ] Nível 3
+  - [ ] Timer
+    - [ ] Contador: MOD10
+    - [ ] Contador: MOD6
+    - [ ] Bancada de Testes
+
+  - [ ] Encoder
+    - [ ] Contador: freq/100
+    - [ ] Contador: 0-7 não reciclado
+    - [ ] MUX
+   
+  - [x] Decoder
+    - [x] Bancada de Testes
+   
+  - [ ] Control
+    - [ ] Latch SR
+    - [ ] Bancada de Testes
+  
+
+
+
 
 ### Imagem da hierarquia do projeto
 ![image](images/all_project.png)
