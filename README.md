@@ -21,7 +21,7 @@ O sistema deve funcionar no momento que precede o cozimento do alimento, ou seja
   - [ ] Encoder
     - [ ] Contador: freq/100
     - [x] Contador: 0-7 não reciclado
-    - [ ] MUX
+    - [x] MUX
    
   - [x] Decoder
     - [x] Bancada de Testes
