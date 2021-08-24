@@ -12,7 +12,7 @@ module latchsr_tb();
             $dumpfile("latchsr_tb.vcd");
             $dumpvars(0, latchsr_tb);
                 r_TB = 0; s_TB = 0;
-            #10 r_TB = 0; s_TB = 0;
+            #10 r_TB = 1; s_TB = 1;
             #10 r_TB = 0; s_TB = 1;
             #10 r_TB = 1; s_TB = 0;
             #10 r_TB = 1; s_TB = 1;
