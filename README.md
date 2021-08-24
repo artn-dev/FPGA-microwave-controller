@@ -26,9 +26,9 @@ O sistema deve funcionar no momento que precede o cozimento do alimento, ou seja
   - [x] Decoder
     - [x] Bancada de Testes
    
-  - [ ] Control
+  - [x] Control
     - [x] Latch SR
-    - [ ] Bancada de Testes
+    - [x] Bancada de Testes
   
 
 
