@@ -13,14 +13,14 @@ O sistema deve funcionar no momento que precede o cozimento do alimento, ou seja
   - [ ] Testar a Integração (Bancada de Testes)
   
 - [ ] Nível 3
-  - [ ] Timer
-    - [ ] Contador: MOD10
-    - [ ] Contador: MOD6
-    - [ ] Bancada de Testes
+  - [x] Timer
+    - [x] Contador: MOD10
+    - [x] Contador: MOD6
+    - [x] Bancada de Testes
 
   - [ ] Encoder
     - [ ] Contador: freq/100
-    - [ ] Contador: 0-7 não reciclado
+    - [x] Contador: 0-7 não reciclado
     - [ ] MUX
    
   - [x] Decoder
