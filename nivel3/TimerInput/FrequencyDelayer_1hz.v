@@ -1,4 +1,4 @@
-module Counter_1hz(
+module FrequencyDelayer_1hz(
     input  wire clk,
     output reg out
 );
