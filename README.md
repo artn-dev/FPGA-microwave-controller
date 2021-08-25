@@ -18,8 +18,8 @@ O sistema deve funcionar no momento que precede o cozimento do alimento, ou seja
     - [x] Contador: MOD6
     - [x] Bancada de Testes
 
-  - [ ] Encoder
-    - [ ] Contador: freq/100
+  - [x] Encoder
+    - [x] Contador: freq/100
     - [x] Contador: 0-7 não reciclado
     - [x] MUX
    
