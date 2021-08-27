@@ -83,6 +83,21 @@ module microwave_tb;
         start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // pressionar start
         start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #3000; // soltar start
 
+        // stop
+        start=1; stop=0; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // pressionar stop
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar stop
+        // clear
+        start=1; stop=1; clear=0; door_closed=1; kbd=10'b0000000000; #1000; // pressionar clear
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar clear
+
+        // tempo = 0:80
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0100000000; #1000; // pressionar 8
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar 8
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000001; #1000; // pressionar 0
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar 0
+        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // pressionar start
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #3000; // soltar start
+
         $finish();
     end
 endmodule
