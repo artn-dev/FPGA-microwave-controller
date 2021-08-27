@@ -1,5 +1,5 @@
-`include "BCDCounter_mod6.v"
-`include "BCDCounter_mod10.v"
+`include "Timer/BCDCounter_mod6.v"
+`include "Timer/BCDCounter_mod10.v"
 
 module Timer(
     input  wire loadn, clrn, clk, enn,
