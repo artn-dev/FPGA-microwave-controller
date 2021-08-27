@@ -1,3 +1,5 @@
+`include "Counter0_7.v"
+
 module Counter0_7_tb;
     parameter HALF_PERIOD = 0.5;
 

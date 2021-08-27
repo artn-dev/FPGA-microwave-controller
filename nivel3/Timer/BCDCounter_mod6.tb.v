@@ -1,3 +1,5 @@
+`include "BCDCounter_mod6.v"
+
 module BCDCounter_mod6_tb;
     parameter HALF_PERIOD = 0.5;
 
