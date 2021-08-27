@@ -14,12 +14,15 @@ module BCDCounter_mod6 (
       curr_state <= data;
     end
     else if (en) begin
-      tc <= (curr_state == 0) ? 1 : 0;
       curr_state <= (curr_state == 0) ? 5 : curr_state - 1;
     end
 
     zero = (curr_state == 0) ? 1 : 0;
     out = curr_state;
+  end
+
+  always @(posedge clk, posedge en) begin
+    tc = (en && curr_state == 0);
   end
 
 endmodule

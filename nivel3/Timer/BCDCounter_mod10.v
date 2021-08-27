@@ -4,31 +4,26 @@ module BCDCounter_mod10 (
   output reg  [3:0] out,
   output reg  tc, zero
 );
-  reg [3:0] curr_state, next_state;
+  reg [3:0] curr_state;
 
   always @(posedge clk, negedge loadn, negedge clrn) begin
-    if (~clrn)
-      curr_state <= 4'd0;
-    else if (~loadn)
+    if (~clrn) begin
+      curr_state <= 0;
+    end
+    else if (~loadn) begin
       curr_state <= data;
-    else if (en)
-      curr_state <= next_state;
-  end
+    end
+    else if (en) begin
+      curr_state <= (curr_state == 0) ? 9 : curr_state - 1;
+    end
 
-  always @(curr_state) begin
+    zero = (curr_state == 0) ? 1 : 0;
     out = curr_state;
-    tc = 1'b0;
-
-    if (curr_state == 4'd0) begin
-      next_state = 4'd9;
-      zero = 1'b1;
-      if (en)
-        tc = 1'b1;
-    end
-    else begin
-      next_state = curr_state - 4'd1;
-      zero = 1'b0;
-    end
   end
+
+  always @(posedge clk, posedge en) begin
+    tc = (en && curr_state == 0);
+  end
+
 
 endmodule
