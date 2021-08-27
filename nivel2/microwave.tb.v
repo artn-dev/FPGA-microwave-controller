@@ -64,6 +64,9 @@ module microwave_tb;
         start=1; stop=1; clear=1; door_closed=0; kbd=10'b0000000000; #1000;
         // fechar porta
         start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000;
+        // start
+        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // pressionar start
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #3000; // soltar start
 
         $finish();
     end
