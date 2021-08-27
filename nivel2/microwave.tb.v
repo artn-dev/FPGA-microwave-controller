@@ -47,6 +47,9 @@ module microwave_tb;
         // stop
         start=1; stop=0; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // pressionar stop
 
+        // clear
+        start=1; stop=1; clear=0; door_closed=1; kbd=10'b0000000000; #1000; // pressionar stop
+
         // tempo = 1:29
         start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000010; #1000; // pressionar 1
         start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar 1
