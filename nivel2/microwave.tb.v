@@ -20,28 +20,26 @@ module microwave_tb;
         $dumpfile("microwave.vcd");
         $dumpvars(0, microwave_tb);
 
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000;
-
         // reset
-        start=1; stop=1; clear=0; door_closed=1; kbd=10'b0000000000; #1000;
+        start=1; stop=1; clear=0; door_closed=1; kbd=10'b0000000000; #500;
 
         // tempo = 0:12
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000010; #1000;  // pressionar 1
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000;  // soltar 1
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000100; #1000;  // pressionar 2
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000;  // soltar 2
-        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000;  // pressionar start
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000010; #500;  // pressionar 1
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500;  // soltar 1
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000100; #500;  // pressionar 2
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500;  // soltar 2
+        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500;  // pressionar start
         start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #14000; // soltar start
 
         // repouso
         start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000;
 
         // tempo = 0:35
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000001000; #1000; // pressionar 3
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar 3
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000100000; #1000; // pressionar 5
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar 5
-        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // pressionar start
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000001000; #500; // pressionar 3
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // soltar 3
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000100000; #500; // pressionar 5
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // soltar 5
+        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // pressionar start
         start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #5000; // soltar start
 
         // stop
@@ -51,51 +49,51 @@ module microwave_tb;
         start=1; stop=1; clear=0; door_closed=1; kbd=10'b0000000000; #1000; // pressionar stop
 
         // tempo = 1:29
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000010; #1000; // pressionar 1
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar 1
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000100; #1000; // pressionar 2
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar 2
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b1000000000; #1000; // pressionar 9
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar 9
-        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // pressionar start
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000010; #500; // pressionar 1
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // soltar 1
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000100; #500; // pressionar 2
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // soltar 2
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b1000000000; #500; // pressionar 9
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // soltar 9
+        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // pressionar start
         start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #3000; // soltar start
 
         // abrir porta
         start=1; stop=1; clear=1; door_closed=0; kbd=10'b0000000000; #1000;
         // fechar porta
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000;
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500;
         // start
-        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // pressionar start
+        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // pressionar start
         start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #3000; // soltar start
 
         // stop
-        start=1; stop=0; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // pressionar stop
+        start=1; stop=0; clear=1; door_closed=1; kbd=10'b0000000000; #500; // pressionar stop
         start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar stop
         // clear
-        start=1; stop=1; clear=0; door_closed=1; kbd=10'b0000000000; #1000; // pressionar clear
+        start=1; stop=1; clear=0; door_closed=1; kbd=10'b0000000000; #500; // pressionar clear
         start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar clear
 
         // tempo = 0:72
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0010000000; #1000; // pressionar 7
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar 7
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000100; #1000; // pressionar 2
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar 2
-        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // pressionar start
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0010000000; #500; // pressionar 7
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // soltar 7
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000100; #500; // pressionar 2
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // soltar 2
+        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // pressionar start
         start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #3000; // soltar start
 
         // stop
-        start=1; stop=0; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // pressionar stop
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar stop
+        start=1; stop=0; clear=1; door_closed=1; kbd=10'b0000000000; #500; // pressionar stop
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // soltar stop
         // clear
-        start=1; stop=1; clear=0; door_closed=1; kbd=10'b0000000000; #1000; // pressionar clear
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar clear
+        start=1; stop=1; clear=0; door_closed=1; kbd=10'b0000000000; #500; // pressionar clear
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // soltar clear
 
         // tempo = 0:80
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0100000000; #1000; // pressionar 8
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar 8
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000001; #1000; // pressionar 0
-        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // soltar 0
-        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #1000; // pressionar start
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0100000000; #500; // pressionar 8
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // soltar 8
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000001; #500; // pressionar 0
+        start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // soltar 0
+        start=0; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #500; // pressionar start
         start=1; stop=1; clear=1; door_closed=1; kbd=10'b0000000000; #3000; // soltar start
 
         $finish();
