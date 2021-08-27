@@ -54,7 +54,16 @@ module BCDCounter_mod10_tb;
 
         // contagem
         clr = 1; en = 1; load = 1;
-        #100;
+        #50;
+
+        // muda valor para 0
+        clr = 1; en = 0; load = 0;
+        data = 4'd0;
+        #10;
+
+        // contagem
+        clr = 1; en = 1; load = 1;
+        #10;
 
         $finish();
     end
