@@ -1,11 +1,11 @@
 module Counter0_7(
-    input  wire clk, clrn,
+    input  wire clk, clr,
     output reg  out
 );
     reg [2:0] state;
 
-    always @(posedge clk, negedge clrn) begin
-        if (~clrn)
+    always @(posedge clk, posedge clr) begin
+        if (clr)
             state = 3'd0;
         else if (state < 3'd7)
             state = state + 3'd1;

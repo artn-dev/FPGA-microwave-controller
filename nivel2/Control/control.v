@@ -1,4 +1,4 @@
-`include "latchsr.v"
+`include "Control/latchsr.v"
 module control(
     input wire startn, stopn, clearn, door_closed, timer_done,
     output wire mag_on

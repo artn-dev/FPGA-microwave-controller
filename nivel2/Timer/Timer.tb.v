@@ -1,3 +1,5 @@
+`include "Timer.v"
+
 module Timer_tb;
     parameter HALF_PERIOD = 0.5;
 

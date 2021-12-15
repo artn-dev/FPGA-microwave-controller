@@ -1,3 +1,5 @@
+`include "BCDCounter_mod6.v"
+
 module BCDCounter_mod6_tb;
     parameter HALF_PERIOD = 0.5;
 
@@ -52,7 +54,16 @@ module BCDCounter_mod6_tb;
 
         // contagem
         clr = 1; en = 1; load = 1;
-        #100;
+        #50;
+
+        // muda valor para 0
+        clr = 1; en = 0; load = 0;
+        data = 4'd0;
+        #10;
+
+        // contagem
+        clr = 1; en = 1; load = 1;
+        #10;
 
         $finish();
     end

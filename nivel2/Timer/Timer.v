@@ -1,8 +1,8 @@
-`include "BCDCounter_mod6.v"
-`include "BCDCounter_mod10.v"
+`include "Timer/BCDCounter_mod6.v"
+`include "Timer/BCDCounter_mod10.v"
 
 module Timer(
-    input  wire loadn, clrn, clk, enn,
+    input  wire loadn, clrn, clk, en,
     input  wire [3:0] data,
     output wire  [3:0] sec_ones, sec_tens, mins,
     output wire  zero
@@ -10,9 +10,6 @@ module Timer(
     wire [3:0] isec_ones, isec_tens, imins;
     wire tc0, tc1, tc2;
     wire zero0, zero1, zero2;
-    wire en;
-
-    assign en = ~enn;
 
     BCDCounter_mod10 ones_cnt(
         clrn, loadn, en, clk, data,

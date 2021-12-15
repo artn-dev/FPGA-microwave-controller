@@ -4,15 +4,15 @@ O **objetivo** do projeto é fazermos a estrutura lógica em verilog do funciona
 O sistema deve funcionar no momento que precede o cozimento do alimento, ou seja deve haver o input do tempo desejado para o cozimento. Cada número pressionado aparece à direita do display, e os outros dígitos se deslocam para a esquerda. Quando o botão iniciar é pressionado, se a porta estiver fechada, o tubo de magnetron é ativado e os dígitos fazem uma contagem decrescente em minutos e segundos. Zeros à frente são eliminados no display. Se a porta é aberta ou o botão de parar é pressionado, o tempo para no valor atual e o magnetron é desligado. Pressionar ‘limpar’ (clear) a qualquer momento força a contagem a 0. Quando a contagem chega a 0, o magnetron é desligado e o tempo lê 0. Se uma pessoa entra um valor inicial para segundos maior que 59 (isto é, 60-99), o contador de segundos deve contar de maneira decrescente deste valor até 00.
 
 ### To-do List do Projeto
-- [ ] Nível 1
-  - [ ] Integrar Nível 2 e 3
-  - [ ] Testar a Integração (Bancada de Testes)
+- [x] Nível 1
+  - [x] Integrar Nível 2 e 3
+  - [x] Testar a Integração (Bancada de Testes)
 
-- [ ] Nível 2
-  - [ ] Integrar todos os blocos do nível 3 
-  - [ ] Testar a Integração (Bancada de Testes)
+- [x] Nível 2
+  - [x] Integrar todos os blocos do nível 3 
+  - [x] Testar a Integração (Bancada de Testes)
   
-- [ ] Nível 3
+- [x] Nível 3
   - [x] Timer
     - [x] Contador: MOD10
     - [x] Contador: MOD6
